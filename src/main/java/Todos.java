@@ -12,7 +12,9 @@ public class Todos {
      */
     private Task[] addToArray(Task[] current, Task task) {
         Task[] tmp = new Task[current.length + 1];
-        System.arraycopy(current, 0, tmp, 0, current.length);
+        for (int i = 0; i < current.length; i++) {
+            tmp[i] = current[i];
+        }
         tmp[tmp.length - 1] = task;
         return tmp;
     }
